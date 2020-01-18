@@ -1,16 +1,26 @@
 import 'package:mobx/mobx.dart';
 
-class Counter{
-  Counter(){
-    increment = Action(_increment);
+part 'counter.g.dart';
+
+class Couter = CounterBase with _$Counter;
+abstract class CounterBase with Store {
+
+  @observable
+  String nome = '';
+
+  @observable
+  String sobrenome = '';
+
+  @action
+  changeName(String newName){
+    nome = newName;
   }
 
-  final value = Observable(0);
-
-  Action increment;
-
-  _increment(){
-    value.value++;
+  @action
+  changeLastName(String newLastName){
+    nome = newLastName;
   }
 
+
+  
 }
