@@ -11,6 +11,9 @@ abstract class CounterBase with Store {
   @observable
   String sobrenome = '';
 
+  @computed
+  String get nomeCompleto => "$nome $sobrenome";
+
   @action
   changeName(String newName) {
     nome = newName;

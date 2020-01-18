@@ -32,7 +32,7 @@ class Home extends StatelessWidget {
                 height: 20,
               ),
               Observer(builder: (_) {
-                return Text('Nome Completo: ${dados.nome} ${dados.sobrenome}');
+                return Text('Nome Completo: ${dados.nomeCompleto}');
               })
             ],
           ),
