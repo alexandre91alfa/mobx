@@ -5,14 +5,12 @@ class Counter{
     increment = Action(_increment);
   }
 
-  final _value = Observable(0);
-  int get value => _value.value;
-  set value(int newValue) => _value.value = newValue;
+  final value = Observable(0);
 
   Action increment;
 
   _increment(){
-    value++;
+    value.value++;
   }
 
 }

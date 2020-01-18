@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
               name: 'counter',
               builder: (_){
                 return Text(
-                  "${counter.value}"
+                  "${counter.value.value}"
                 );
               },
             )
