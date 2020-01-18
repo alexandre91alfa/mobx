@@ -2,9 +2,9 @@ import 'package:mobx/mobx.dart';
 
 part 'counter.g.dart';
 
-class Couter = CounterBase with _$Counter;
-abstract class CounterBase with Store {
+class Counter = CounterBase with _$Counter;
 
+abstract class CounterBase with Store {
   @observable
   String nome = '';
 
@@ -12,15 +12,12 @@ abstract class CounterBase with Store {
   String sobrenome = '';
 
   @action
-  changeName(String newName){
+  changeName(String newName) {
     nome = newName;
   }
 
   @action
-  changeLastName(String newLastName){
-    nome = newLastName;
+  changeLastName(String newLastName) {
+    sobrenome = newLastName;
   }
-
-
-  
 }
