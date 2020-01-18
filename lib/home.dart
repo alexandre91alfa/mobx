@@ -11,6 +11,12 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('MobX'),
+        actions: <Widget>[
+          IconButton(
+            icon: Icon(Icons.vertical_align_center),
+            onPressed: counter.decrement,
+          )
+        ],
       ),
       body: Center(
         child: Column(
@@ -20,7 +26,7 @@ class Home extends StatelessWidget {
               name: 'counter',
               builder: (_){
                 return Text(
-                  "${counter.value}"
+                  "${counter.count}"
                 );
               },
             )
